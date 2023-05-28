@@ -8,7 +8,7 @@ router.get('/', withAuth, async (req, res) => {
     res.json(`user_id: ${req.session.user_id}`);
 });
 
-// CREATE new user
+// create new user
 router.post('/', async (req, res) => {
     try {
         const userData = await User.create({
