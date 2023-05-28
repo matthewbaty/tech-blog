@@ -1,0 +1,17 @@
+[
+    {
+        "title": "Coding is Fun",
+        "content": "Coding is fun!",
+        "user_id": 1
+    },
+    {
+        "title": "Coding is Easy",
+        "content": "Coding is easy(not)!",
+        "user_id": 2
+    },
+    {
+        "title": "Coding is Hard",
+        "content": "Coding is Hard!",
+        "user_id": 3
+    }
+]

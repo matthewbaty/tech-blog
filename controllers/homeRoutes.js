@@ -101,7 +101,7 @@ router.get('/updatepost/:id', async (req, res) => {
             include: [{
                 model: User,
                 attributes: ['username']
-            }
+            },
             {
                 model: Comment,
                 include: [{
