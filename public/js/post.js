@@ -48,11 +48,11 @@ const updatePostFormHandler = async (event) => {
 const deletePostFormHandler = async (event) => {
     event.preventDefault();
 
-    const response = await fetch(`/api/posts/${postId}`, {method:'DELETE'});
+    const response = await fetch(`/api/posts/${postId}`, { method: 'DELETE' });
 
     if (response.ok) {
         document.location.replace('/dashboard');
-    }   else {
+    } else {
         alert('Post Delete Failed');
     }
 };
@@ -70,3 +70,26 @@ const deletePost = async (postId) => {
     }
 };
 
+const deletePostHandler = (event) => {
+    if (event.target.matches('.delete-post')) {
+        const postId = event.target.getAttribute('data-post-id');
+        deletePost(postId);
+    }
+};
+
+const newPostForm = document.querySelector('.new-post-form');
+if (newPostForm) {
+    newPostForm.addEventListener('submit', newPostFormHandler);
+};
+
+const updatePostButton = document.querySelector('#update-post');
+if (updatePostButton) {
+    updatePostButton.addEventListener('click', updatePostFormHandler);
+}
+
+const deletePostButton = document.querySelector('#delete-post');
+if (deletePostButton) {
+    deletePostButton.addEventListener('click', deletePostFormHandler);
+}
+
+document.addEventListener('click', deletePostHandler);
