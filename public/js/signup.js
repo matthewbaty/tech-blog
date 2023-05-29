@@ -8,9 +8,9 @@ async function signup_handler(event) {
     console.log(`username: ${username}\nemail: ${email}\npassword: ${password}`);
 
     if (username && email && password) {
-        const response = await fetch('/api/users/signup', {
+        const response = await fetch('/api/users', {
             method: 'POST',
-            body: JSON.stringify({ firstName: username, email, password }),
+            body: JSON.stringify({ username, email, password }),
             headers: { 'Content-Type': 'application/json' }
         })
 

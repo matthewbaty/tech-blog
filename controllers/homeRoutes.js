@@ -25,7 +25,7 @@ router.get('/', withAuth, async (req, res) => {
     }
 });
 
-router.get('/singup', (req, res) => {
+router.get('/signup', (req, res) => {
     if (req.session.logged_in) {
         return res.redirect('/dashboard');
     }

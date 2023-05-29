@@ -34,7 +34,7 @@ router.post('/login', async (req, res) => {
         //lookup a user based on the email we send from the login page form
         const userData = await User.findOne({
             where: {
-                email: req.body.email
+                username: req.body.username
             }
         });
         //if that user exists, check their password (otherwise say "user not found")
