@@ -90,7 +90,7 @@ router.get('/dashboard', withAuth, async (req, res) => {
 
 router.get('/newpost', (req, res) => {
     if (req.session.logged_in) {
-        return res.render('newpost');
+        return res.render('newpost', {logged_in: true });
     }
     res.redirect('/login');
 });

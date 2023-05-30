@@ -77,10 +77,12 @@ const deletePostHandler = (event) => {
     }
 };
 
-const newPostForm = document.querySelector('#new-post-form');
-if (newPostForm) {
-    newPostForm.addEventListener('submit', newPostFormHandler);
-};
+// const newPostForm = document.querySelector('#new-post-form');
+// if (newPostForm) {
+//     newPostForm.addEventListener('submit', newPostFormHandler);
+// };
+
+document.querySelector('#new-post-form').addEventListener('submit', newPostFormHandler);
 
 const updatePostButton = document.querySelector('#update-post');
 if (updatePostButton) {
