@@ -46,11 +46,14 @@ router.get('/:id', async (req, res) => {
 // delete post
 router.delete('/:id', withAuth, async (req, res) => {
     try {
-        await Comment.destroy({
-            where: { post_id: req.params.id },
-        });
+        // await Comment.destroy({
+        //     where: { post_id: req.params.id },
+        // });
         const deletedPost = await Post.destroy({
-            where: { id: req.params.id },
+            where: { 
+                id: req.params.id, 
+                user_id: req.session.user_id,
+            },
         });
         if (!deletedPost) {
             res.status(404).json({ message: 'Cannot locate a post with this id.' });

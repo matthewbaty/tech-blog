@@ -3,19 +3,24 @@
 </div>
 <br>
 <h2 class="md-4 ms-3">My Blog Posts</h2>
-<div class="card-deck">
+<div class="row">
     {{#each posts}}
-    <div class="card ms-3" style="width: 25rem;">
-        <div class="card-body">
-            <div class="post-container">
-                <h2><a href="/post/{{id}}" class="text-title">{{title}}</a></h2>
-                <p>Created by: {{user.username}} Date: {{format_date createdAt}}</p>
-                <a href="/updatepost/{{id}}" class="btn btn-dark">Update Post</a>
-                <button class="btn btn-dark delete-post" data-post-id="{{id}}">Delete</button>
+    <div class="col-md-4 mb-3">
+        <div class="card" id="blog-dashboard-cards">
+            <div class="card-body">
+                <div class="post-container">
+                    <h2><a href="/post/{{id}}" class="text-title">{{title}}</a></h2>
+                    <p>Created by: {{user.username}} Date: {{format_date createdAt}}</p>
+                    <a href="/updatepost/{{id}}" class="btn btn-dark">Update Post</a>
+                    <button class="btn btn-dark delete-post-btn" data-post-id="{{id}}">Delete</button>
+                </div>
             </div>
         </div>
     </div>
     {{/each}}
-    <br>
 </div>
-<button class="btn btn-success"><a href="/newpost" style="text-decoration:none" class="text-white">New Post</a></button>
+<br>
+<div class="text-center">
+    <button class="btn btn-success" id="new-post-btn"><a href="/newpost" style="text-decoration:none"
+            class="text-white">New Post</a></button>
+</div>
