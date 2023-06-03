@@ -21,4 +21,3 @@ async function login_handler(event) {
 }
 
 $('#login_btn').click(login_handler);
-// $('#signup_btn').click((event) => document.location.href = '/signup');

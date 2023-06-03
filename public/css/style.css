@@ -5,7 +5,7 @@
     width: 25rem;
 }
 
-#post-card, #comment-card {
+#post-card, #comment-card, #new-post-card {
     margin: auto;
     margin-top: 30px;
     padding: 10px;

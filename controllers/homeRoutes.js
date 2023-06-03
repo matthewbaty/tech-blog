@@ -3,7 +3,7 @@ const { Post, User, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 require('dotenv').config();
 
-router.get('/', withAuth, async (req, res) => {
+router.get('/', async (req, res) => {
     try {
         const postData = await Post.findAll({
             include: [
@@ -18,7 +18,7 @@ router.get('/', withAuth, async (req, res) => {
 
         res.render('homepage', {
             posts,
-            logged_in: req.session.logged_in
+            logged_in: req.session.logged_in 
         });
     } catch (err) {
         res.status(500).json(err);
