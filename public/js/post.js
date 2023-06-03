@@ -78,28 +78,28 @@ const updatePostFormHandler = async (event) => {
 // };
 
 //BEGIN TEST!!!!!
-const deletePostHandler = async (event) => {
-    event.preventDefault();
+// const deletePostHandler = async (event) => {
+//     event.preventDefault();
   
-    // Get the blog post ID
-    const postId = event.target.dataset.postId;
+//     // Get the blog post ID
+//     const postId = event.target.dataset.postId;
   
-    try {
-      const response = await fetch(`/api/posts/${postId}`, {
-        method: 'DELETE',
-      });
+//     try {
+//       const response = await fetch(`/api/posts/${postId}`, {
+//         method: 'DELETE',
+//       });
   
-      if (response.ok) {
-        // Reload the page to reflect the updated blog post list
-        document.location.reload();
-      } else {
-        alert('Failed to delete blog post');
-      }
-    } catch (err) {
-      console.log(err);
-      alert('An error occurred');
-    }
-  };
+//       if (response.ok) {
+//         // Reload the page to reflect the updated blog post list
+//         document.location.reload();
+//       } else {
+//         alert('Failed to delete blog post');
+//       }
+//     } catch (err) {
+//       console.log(err);
+//       alert('An error occurred');
+//     }
+//   };
 
 // const newPostForm = document.querySelector('#new-post-form');
 // if (newPostForm) {
@@ -118,10 +118,10 @@ if (updatePostButton) {
 //     deletePostButton.addEventListener('click', deletePostFormHandler);
 // }
 
-const deleteButtons = document.querySelectorAll('.delete-post-btn');
-  deleteButtons.forEach((button) => {
-    button.addEventListener('click', deletePostHandler);
-  });
+// const deleteButtons = document.querySelectorAll('.delete-post-btn');
+//   deleteButtons.forEach((button) => {
+//     button.addEventListener('click', deletePostHandler);
+//   });
   
 
 // document.addEventListener('click', deletePostHandler);
