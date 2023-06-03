@@ -106,7 +106,7 @@ const deletePostHandler = async (event) => {
 //     newPostForm.addEventListener('submit', newPostFormHandler);
 // };
 
-// document.querySelector('#new-post-form').addEventListener('submit', newPostFormHandler);
+document.querySelector('#new-post-form').addEventListener('submit', newPostFormHandler);
 
 const updatePostButton = document.querySelector('#update-post');
 if (updatePostButton) {

@@ -2,6 +2,14 @@
     margin: auto;
     margin-top: 30px;
     padding: 10px;
+    width: 25rem;
+}
+
+#post-card, #comment-card {
+    margin: auto;
+    margin-top: 30px;
+    padding: 10px;
+    width: 75rem;
 }
 
 #new-post-card {
@@ -17,14 +25,17 @@
     margin-bottom: 20px;
 }
 
-@media (min-width: 768px) {
-    .navbar-brand.abs
-        {
+@media screen and (max-width: 768px) { 
+    .navbar-brand.abs {
             position: absolute;
             width: auto;
             left: 50%;
             transform: translateX(-50%);
             text-align: center;
-        }
     }
+    
+    #signup-card, #login-card, #post-card, #comment-card {
+        width: 22rem;
+    }
+}
     

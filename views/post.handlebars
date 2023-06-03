@@ -1,0 +1,28 @@
+<div class="card" id="post-card">
+    <article>
+        <h1 class="text-center">{{title}}</h1>
+        <p class="text-center">Created by: {{user.username}} Date: {{format_date createdAt}}</p>
+        <p class="ms-3">{{content}}</p>
+    </article>
+    {{#if logged_in}}
+    <form class="new-comment-form" class="mb-3">
+        <div class="mb-3">
+            <label for="new-content-comment" class="form-label">Add Comment:</label>
+            <textarea class="form-control" id="new-content-comment" rows="3"></textarea>
+        </div>
+        <div class="text-center">
+            <button type="submit" class="btn btn-success">Submit</button>
+        </div>
+    </form>
+</div>
+<div class="card" id="comment-card">
+    {{/if}}
+    <br>
+    <h2 class="text-center">Comments</h2>
+    {{#each comments}}
+    <div class="comment-text">
+        <p>{{comment_text}}</p>
+        <p>Created by: {{user.username}} Date: {{format_date createdAt}}</p>
+    </div>
+    {{/each}}
+</div>
