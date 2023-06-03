@@ -34,7 +34,7 @@
             text-align: center;
     }
     
-    #signup-card, #login-card, #post-card, #comment-card {
+    #signup-card, #login-card, #post-card, #comment-card, #new-post-card {
         width: 22rem;
     }
 }

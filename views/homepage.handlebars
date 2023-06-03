@@ -1,0 +1,21 @@
+<h1 class="text-center">Tech Blog Homepage</h1>
+<div class="container">
+    <div class="row">
+        {{#each posts}}
+        <div class="col-sm-6 p-3">
+            <div class="card">
+                <div class="card-header bg-warning">
+                    <h2 class="card-title">{{title}}</h2>
+            </div>
+                <div class="card-body">
+                    <div class="card-text">
+                        <p class="card-text">{{content}}</p>
+                    </div>
+                    <p class="card-subtitle mb-2 text-body-secondary">Created by: {{user.username}} Date: {{format_date createdAt}}</p>
+                    <button class="btn btn-success"><a href="/post/{{id}}" style="text-decoration:none" class="text-white">Add Comment</a></button>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>
